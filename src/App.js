@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Navbar from "./componets/Navbar";
 import "./index.css";
 import Home from "./pages/Home";
@@ -25,6 +25,7 @@ function App() {
               </Protected>
             }
           />
+          <Route path="/netflix-n-chill" element={<Navigate to="/" />} />
         </Routes>
       </AuthContextProvider>
     </>
